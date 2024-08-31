@@ -1,35 +1,30 @@
-from flask import Flask, request, jsonify
+from fastapi import FastAPI, HTTPException, Request
+from pydantic import BaseModel
 
-app = Flask(__name__)
+app = FastAPI()
 
-# نقطة البداية
-@app.route('/pin_PhiSNAIL', methods=['GET'])
-def get_status():
-    return jsonify({"status": "pin_PhiSNAIL API is running"})
+class Data(BaseModel):
+    key1: str
+    key2: str
 
-# هنا سنضيف المزيد من نقاط النهاية (endpoints) لتفاعل النماذج الأخرى مع Pin_ai
+@app.get("/pin_PhiSNAIL")
+async def get_status():
+    return {"status": "Pin_PhiSNAIL API is running"}
 
-if __name__ == '__main__':
-    app.run(debug=True, port=5000)
-
-# Endpoint للتفاعل مع نموذج pin_supermarket
-@app.route('/pin_PhiSNAIL/interact_with_pin_supermarket', methods=['POST'])
-def interact_with_pin_supermarket():
-    data = request.json
-    # تنفيذ المنطق المطلوب للتفاعل مع pin_supermarket
+@app.post("/pin_PhiSNAIL/interact_with_pin_forest")
+async def interact_with_pin_forest(data: Data):
+    # تنفيذ المنطق المطلوب للتفاعل مع Pin_Forest
     response = {
-        "message": "Interacted with pin_supermarket successfully",
-        "data": data
+        "message": "Interacted with Pin_Forest successfully",
+        "data": data.dict()
     }
-    return jsonify(response)
+    return response
 
-# Endpoint للتفاعل مع نموذج pin_arcd
-@app.route('/pin_PhiSNAIL/interact_with_pin_arcd', methods=['POST'])
-def interact_with_pin_arcd():
-    data = request.json
-    # تنفيذ المنطق المطلوب للتفاعل مع pin_arcd
+@app.post("/pin_PhiSNAIL/interact_with_pin_PhiUSIIL")
+async def interact_with_pin_PhiUSIIL(data: Data):
+    # تنفيذ المنطق المطلوب للتفاعل مع Pin_PhiUSIIL
     response = {
-        "message": "Interacted with pin_arcd successfully",
-        "data": data
+        "message": "Interacted with Pin_PhiUSIIL successfully",
+        "data": data.dict()
     }
-    return jsonify(response)
+    return response

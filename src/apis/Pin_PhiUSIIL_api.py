@@ -7,11 +7,11 @@ class Data(BaseModel):
     key1: str
     key2: str
 
-@app.get("/Pin_PhiUSIIL")
+@app.get("/pin_PhiUSIIL")
 async def get_status():
     return {"status": "Pin_PhiUSIIL API is running"}
 
-@app.post("/Pin_PhiUSIIL/interact_with_pin_forest")
+@app.post("/pin_PhiUSIIL/interact_with_pin_forest")
 async def interact_with_pin_forest(data: Data):
     # تنفيذ المنطق المطلوب للتفاعل مع Pin_Forest
     response = {
@@ -21,7 +21,7 @@ async def interact_with_pin_forest(data: Data):
     return response
 
 @app.post("/pin_PhiUSIIL/interact_with_pin_PhiSNAIL")
-async def interact_with_Pin_PhiSNAIL(data: Data):
+async def interact_with_pin_PhiSNAIL(data: Data):
     # تنفيذ المنطق المطلوب للتفاعل مع Pin_PhiSNAIL
     response = {
         "message": "Interacted with Pin_PhiSNAIL successfully",
