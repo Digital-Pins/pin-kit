@@ -36,6 +36,9 @@ Modules Description
 PhiUSIIL - Manager
 Description: PhiUSIIL is the core module responsible for overseeing the entire project, making strategic decisions, and ensuring that all other modules are aligned with the project’s goals.
 
+Forest - ceo
+Description: Forest 
+
 PhiSNAIL - Assistant Manager
 Description: PhiSNAIL assists PhiUSIIL in managing day-to-day operations, ensuring rapid adaptation to changes, and improving customer satisfaction.
 
