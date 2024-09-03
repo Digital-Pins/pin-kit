@@ -1,12 +1,16 @@
 # pin_PhiUSIIL/main.py
 from fastapi import FastAPI
 
+
+class PinPhiUSIIL(Base):
+    __tablename__ = "pin_phiusiil"
+
+    id = Column(Integer, primary_key=True, index=True)
+    vote = Column(String, index=True)
+    forest_id = Column(Integer, ForeignKey("pin_forest.id"))
+
+    forest = relationship("pinForest", back_populates="usiil_votes")
+
 app = FastAPI()
 
 
-@app.post("/")
-async def handle_post(data: dict):
-    return {"message": "Data received", "data": data}
-@app.get("/")
-async def read_root():
-    return {"message": "Welcome to the PhiUSIIL model"}

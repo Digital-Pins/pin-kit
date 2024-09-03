@@ -1,0 +1,23 @@
+[
+  "tests/test_all_models.py::test_pin_PhiSNAIL",
+  "tests/test_all_models.py::test_pin_PhiUSIIL",
+  "tests/test_all_models.py::test_pin_ai_powered",
+  "tests/test_all_models.py::test_pin_arcd",
+  "tests/test_all_models.py::test_pin_customer_support",
+  "tests/test_all_models.py::test_pin_forest",
+  "tests/test_all_models.py::test_pin_inventory",
+  "tests/test_all_models.py::test_pin_marketing",
+  "tests/test_all_models.py::test_pin_sales",
+  "tests/test_all_models.py::test_pin_security_hr",
+  "tests/test_all_models.py::test_pin_supermarket",
+  "tests/test_all_models.py::test_pin_technical_support",
+  "tests/test_all_models.py::test_pin_wholesale",
+  "tests/test_models.py::test_create_models",
+  "tests/test_models.py::test_delete_model",
+  "tests/test_models.py::test_exceptions",
+  "tests/test_models.py::test_models",
+  "tests/test_models.py::test_update_model",
+  "tests/test_simple.py::test_simple",
+  "tests/test_utils.py::test_model_names",
+  "tests/test_utils.py::test_validator"
+]

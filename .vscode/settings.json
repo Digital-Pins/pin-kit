@@ -1,0 +1,7 @@
+{
+    "CodeGPT.apiKey": "CodeGPT Plus Beta",
+    "python.analysis.typeCheckingMode": "basic",
+    "CodeGPT.Autocomplete.enabled": true,
+    "CodeGPT.Autocomplete.provider": "Ollama - codegpt/replit-code-v1_5-3b",
+    "git.ignoreLimitWarning": true
+}
